@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>Incredible India Travel - GTM Practice</title>
+
+  <!-- Replace GTM-XXXXXXX with your Google Tag Manager ID -->
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];
+    w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});
+    var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
+    j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;
+    f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-XXXXXXX');
+  </script>
+  <!-- End Google Tag Manager -->
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins',sans-serif;
+    }
+
+    body{
+      background:#f5f7fa;
+      color:#333;
+      line-height:1.6;
+    }
+
+    header{
+      height:100vh;
+      background:
+      linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+      url('https://images.unsplash.com/photo-1524492412937-b28074a5d7da?q=80&w=1600&auto=format&fit=crop')
+      center/cover no-repeat;
+      color:white;
+    }
+
+    nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:20px 8%;
+    }
+
+    nav h2{
+      font-size:32px;
+    }
+
+    nav ul{
+      list-style:none;
+      display:flex;
+      gap:25px;
+    }
+
+    nav ul li a{
+      color:white;
+      text-decoration:none;
+      font-weight:500;
+    }
+
+    .hero{
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      height:80vh;
+      padding:20px;
+    }
+
+    .hero h1{
+      font-size:64px;
+      margin-bottom:20px;
+    }
+
+    .hero p{
+      max-width:750px;
+      font-size:20px;
+      margin-bottom:30px;
+    }
+
+    .btn-group{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:15px;
+      margin-top:20px;
+    }
+
+    button{
+      padding:14px 26px;
+      border:none;
+      border-radius:30px;
+      font-size:16px;
+      font-weight:600;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    .primary-btn{
+      background:#ff6b35;
+      color:white;
+    }
+
+    .secondary-btn{
+      background:white;
+      color:#111827;
+    }
+
+    button:hover{
+      transform:translateY(-4px);
+    }
+
+    section{
+      padding:80px 8%;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:50px;
+    }
+
+    .section-title h2{
+      font-size:42px;
+      margin-bottom:10px;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
+    }
+
+    .card{
+      background:white;
+      border-radius:18px;
+      overflow:hidden;
+      box-shadow:0 5px 20px rgba(0,0,0,0.08);
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-8px);
+    }
+
+    .card img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+    }
+
+    .card-content{
+      padding:20px;
+    }
+
+    .card-content h3{
+      margin-bottom:10px;
+    }
+
+    .practice-area{
+      background:#111827;
+      color:white;
+      border-radius:20px;
+      padding:50px;
+      text-align:center;
+    }
+
+    .practice-area h2{
+      margin-bottom:20px;
+      font-size:38px;
+    }
+
+    .practice-buttons{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:center;
+      gap:20px;
+      margin-top:30px;
+    }
+
+    .practice-buttons button{
+      min-width:220px;
+    }
+
+    footer{
+      background:#0f172a;
+      color:#d1d5db;
+      text-align:center;
+      padding:25px;
+      margin-top:50px;
+    }
+
+    @media(max-width:768px){
+
+      nav{
+        flex-direction:column;
+        gap:20px;
+      }
+
+      nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+      }
+
+      .hero h1{
+        font-size:42px;
+      }
+
+      .hero p{
+        font-size:16px;
+      }
+
+      .section-title h2{
+        font-size:32px;
+      }
+
+      .practice-area{
+        padding:30px 20px;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <header>
+
+    <nav>
+      <h2>Explore India</h2>
+
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Destinations</a></li>
+        <li><a href="#">Tours</a></li>
+        <li><a href="#">Gallery</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero">
+
+      <h1>Travel Across Incredible India</h1>
+
+      <p>
+        Explore majestic palaces, Himalayan mountains, Kerala backwaters,
+        Goa beaches, spiritual temples, and vibrant cultures across India.
+      </p>
+
+      <div class="btn-group">
+
+        <button class="primary-btn"
+          onclick="trackEvent('hero_book_trip')">
+          Book a Trip
+        </button>
+
+        <button class="secondary-btn"
+          onclick="trackEvent('hero_download_brochure')">
+          Download Brochure
+        </button>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <section>
+
+    <div class="section-title">
+      <h2>Top Destinations</h2>
+      <p>Popular travel experiences in India</p>
+    </div>
+
+    <div class="cards">
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&w=1200&auto=format&fit=crop" alt="Agra">
+
+        <div class="card-content">
+          <h3>Agra</h3>
+
+          <p>
+            Visit the iconic Taj Mahal and discover Mughal architecture.
+          </p>
+
+          <br>
+
+          <button class="primary-btn"
+            onclick="trackDestination('Agra')">
+            Explore Agra
+          </button>
+
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?q=80&w=1200&auto=format&fit=crop" alt="Goa">
+
+        <div class="card-content">
+          <h3>Goa</h3>
+
+          <p>
+            Relax on beautiful beaches and enjoy vibrant nightlife.
+          </p>
+
+          <br>
+
+          <button class="primary-btn"
+            onclick="trackDestination('Goa')">
+            Explore Goa
+          </button>
+
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1514222134-b57cbb8ce073?q=80&w=1200&auto=format&fit=crop" alt="Kerala">
+
+        <div class="card-content">
+          <h3>Kerala</h3>
+
+          <p>
+            Cruise through scenic backwaters and lush greenery.
+          </p>
+
+          <br>
+
+          <button class="primary-btn"
+            onclick="trackDestination('Kerala')">
+            Explore Kerala
+          </button>
+
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section>
+
+    <div class="practice-area">
+
+      <h2>GTM Event Tracking Practice</h2>
+
+      <p>
+        Click the buttons below to trigger custom dataLayer events
+        for Google Tag Manager testing.
+      </p>
+
+      <div class="practice-buttons">
+
+        <button class="primary-btn"
+          onclick="trackEvent('cta_signup_click')">
+          Signup CTA
+        </button>
+
+        <button class="secondary-btn"
+          onclick="trackEvent('video_play_click')">
+          Play Travel Video
+        </button>
+
+        <button class="primary-btn"
+          onclick="trackEvent('tour_package_click')">
+          View Tour Package
+        </button>
+
+        <button class="secondary-btn"
+          onclick="trackEvent('newsletter_subscribe')">
+          Subscribe Newsletter
+        </button>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <footer>
+    <p>© 2026 Explore India Travel | GTM Practice Website</p>
+  </footer>
+
+  <script>
+
+    window.dataLayer = window.dataLayer || [];
+
+    function trackEvent(eventName){
+
+      dataLayer.push({
+        event: eventName,
+        page_name: 'india_travel_homepage',
+        event_time: new Date().toISOString()
+      });
+
+      console.log('Event Fired:', eventName);
+
+      alert('GTM Event Triggered: ' + eventName);
+    }
+
+    function trackDestination(destinationName){
+
+      dataLayer.push({
+        event: 'destination_click',
+        destination: destinationName,
+        page_name: 'india_travel_homepage'
+      });
+
+      console.log('Destination Clicked:', destinationName);
+
+      alert('Destination Event Fired: ' + destinationName);
+    }
+
+  </script>
+
+</body>
+</html>
